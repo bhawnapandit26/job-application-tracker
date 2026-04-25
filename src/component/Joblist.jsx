@@ -7,12 +7,9 @@ const Joblist = () =>{
     const jobCon = useContext(jobsContext);
     const clearLocalStorage = jobCon.clearLocalStorage;
     const [searchText, setSearchText] = useState("");
-    const [filteredJobs, setFilteredJobs] = useState(jobCon.jobs);
 
-    const handleClick = () =>{
-        const filterdData = jobCon.jobs.filter((item)=> item.company.toLowerCase().includes(searchText.toLowerCase()) || item.role.toLowerCase().includes(searchText.toLowerCase()));
-        setFilteredJobs(filterdData);
-    }
+   const filteredJobs = jobCon.jobs.filter((item)=> (item.company || "").toLowerCase().includes(searchText.toLowerCase()) || (item.role || "").toLowerCase().includes(searchText.toLowerCase()));
+
 
     return(
         <div>
@@ -20,12 +17,11 @@ const Joblist = () =>{
            <div className="flex justify-center items-center py-5 flex-col">
                 <div className="w-full flex items-center mb-3">
                     <input id="search" name="search" type="text" placeholder="Search by company or role..." className="border border-gray-400 px-2.5 py-2 rounded-sm w-full" value={searchText} onChange={(e)=> setSearchText(e.target.value)}/>
-                    <button className="bg-blue-950 hover:bg-blue-900 p-2.5 rounded-lg text-white font-bold cursor-pointer ml-2" onClick={handleClick}>Search</button>
                 </div>
                 {
                 filteredJobs.map((item, index)=>{
                     return(
-                        <JobItem key={index} item={item}/>
+                        <JobItem key={item.id} item={item}/>
                     )
                 })
                 }
