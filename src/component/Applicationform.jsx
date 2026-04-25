@@ -36,7 +36,7 @@ const Applicationform = () =>{
     },[jobCon.editJob])
 
     return(
-        <div className="flex justify-center py-8 w-full">
+        <div className="flex justify-center sm:pt-8 pb-8 pt-4 w-full">
             <form className="bg-white inline-flex flex-col p-8 rounded-4xl shadow-xl shadow-gray-400 w-full md:w-2/3 ">
                 <div className="text-center text-2xl font-bold text-gray-800 pb-5">Add a Job</div>
                 <div>
