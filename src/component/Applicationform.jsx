@@ -37,7 +37,7 @@ const Applicationform = () =>{
 
     return(
         <div className="flex justify-center py-8 w-full">
-            <form className="bg-white inline-flex flex-col p-8 rounded-4xl shadow-xl shadow-gray-400 w-full md:w-2/3 xl:w-1/3 static xl:fixed">
+            <form className="bg-white inline-flex flex-col p-8 rounded-4xl shadow-xl shadow-gray-400 w-full md:w-2/3 ">
                 <div className="text-center text-2xl font-bold text-gray-800 pb-5">Add a Job</div>
                 <div>
                     <label htmlFor="company" className="text-md text-gray-800">Company Name</label><br/>

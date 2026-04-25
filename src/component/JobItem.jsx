@@ -19,7 +19,7 @@ const JobItem = ({item}) => {
                     <div className="text-md text-gray-900 uppercase font-medium">{item.role}</div>
                 </div>
             </div>
-            <div className="w-full md:w-1/2 flex items-center">
+            <div className="w-full md:w-1/2 flex items-center mt-1.5 md:mt-0">
                 <div className="px-2 w-1/3">
                     <div className="text-[12px] text-gray-600">Date</div>
                     <div className="text-md text-gray-900 uppercase font-medium">{item.date}</div>
